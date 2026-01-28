@@ -1,0 +1,19 @@
+const verses = [
+  {
+    en: "The Lord is my shepherd; I shall not want. – Psalm 23:1",
+    ta: "கர்த்தர் என் மேய்ப்பர்; எனக்கு எதுவும் குறையாது. – சங்கீதம் 23:1"
+  },
+  {
+    en: "I can do all things through Christ. – Philippians 4:13",
+    ta: "கிறிஸ்துவினாலே எல்லாவற்றையும் செய்ய வல்லவன். – பிலிப்பியர் 4:13"
+  }
+];
+
+const today = new Date().getDate();
+const verse = verses[today % verses.length];
+
+document.getElementById("verseBox").innerHTML = `
+  <h3>${verse.en}</h3>
+  <hr>
+  <h3>${verse.ta}</h3>
+`;
